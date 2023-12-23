@@ -1,8 +1,4 @@
-#!/usr/bin/python 
-import os
+#!/bin/bash
+set -euo pipefail
 
-print("Hello from the Buildkite plugin!")
-
-# Example of using an environment variable
-build_number = os.environ.get('BUILDKITE_BUILD_NUMBER')
-print(f"Build number: {build_number}")
+python plugin_scripts/script.py
