@@ -1,7 +1,8 @@
 name: PR Validation
 description: Does PR validation on github pull requests 
 author: https://github.com/devdil
-requirements: []
+requirements:
+  - docker
 configuration:
   properties:
     pattern:
