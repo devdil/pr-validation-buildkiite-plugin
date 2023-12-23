@@ -1,4 +1,9 @@
 #!/bin/bash
 set -euo pipefail
+echo "----------------------------"
+echo $BASH_SOURCE
+echo "----------------------------"
+echo $0
+echo "----------------------------"
 
-python plugin_scripts/script.py
+docker run -it --rm --name validation-test diljitpr/pr-validation-buildkite-scripts:latest
