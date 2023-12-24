@@ -5,6 +5,7 @@ requirements:
   - docker
 configuration:
   properties:
-    pattern:
+    pr-title:
       type: string
   additionalProperties: false
+  required: []
