@@ -2,6 +2,8 @@ import os
 import sys
 import requests
 
+for name, value in os.environ.items():
+    print("{0}: {1}".format(name, value))
 
 def validate_pr_title(pr_number, github_token):
     BUILDKITE_REPO = os.environ.get('BUILDKITE_REPO')

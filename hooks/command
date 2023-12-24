@@ -6,4 +6,4 @@ echo "----------------------------"
 echo $0
 echo "----------------------------"
 
-docker run -it --rm --name validation-test diljitpr/pr-validation-buildkite-scripts:latest
+docker run -it --rm --pull=always --env-file <(env) --name validation-test diljitpr/pr-validation-buildkite-scripts:latest
