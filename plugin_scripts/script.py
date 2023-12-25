@@ -2,9 +2,14 @@ import os
 import sys
 import requests
 
+#print env vars....
 for name, value in os.environ.items():
     print("{0}: {1}".format(name, value))
 
+"""
+Validates pr title against a specifiction specifiied in the configuration
+provided by the user in plugin definition
+"""
 def validate_pr_title(pr_number, github_token):
     BUILDKITE_REPO = os.environ.get('BUILDKITE_REPO')
     if not BUILDKITE_REPO:
@@ -41,7 +46,7 @@ if not GITHUB_TOKEN:
 
 PR_TITLE_REGEX = os.environ.get('PR-TITLE')
 PR_NUMBER = os.environ.get('BUILDKITE_PULL_REQUEST')
-if PR_TITLE_REGEX and not PR_NUMBER:
+if not PR_TITLE_REGEX or not PR_NUMBER:
     print('Should be a pull request to validate. Please ensure this step is only executed for a pull request.')
     sys.exit(1)
 else:
