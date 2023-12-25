@@ -6,6 +6,12 @@ requirements:
 configuration:
   properties:
     pr-title:
-      type: string
+      type: object
+      properties:
+        regex:
+          type: string
+        error_message:
+          type: string
+
   additionalProperties: false
   required: []

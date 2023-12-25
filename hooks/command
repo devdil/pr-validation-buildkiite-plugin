@@ -4,6 +4,7 @@ echo "----------------------------"
 echo $BASH_SOURCE
 echo "----------------------------"
 echo $0
-echo "----------------------------"
-
+echo "--------env variables--------------------"
+printenv
+echo "-------------------------------"
 docker run -it --rm --pull=always --env-file <(env) --name validation-test diljitpr/pr-validation-buildkite-scripts:latest
